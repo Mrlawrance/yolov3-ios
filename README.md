@@ -43,3 +43,5 @@ pip install coremltools==0.8.0
 
 ### 2.Convert .h5 model to .mlmodel
 ```python coreml.py```
+
+## Building project in Xcode
