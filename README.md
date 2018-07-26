@@ -5,7 +5,7 @@ Using yolo v3 object detection on ios platform.
 ![car](https://raw.githubusercontent.com/Mrlawrance/yolov3-ios/master/imgfolder/car.jpeg)
 
 ## QuickStart:
-Build tiny_model.xcodeproj in "ios".
+Run tiny_model.xcodeproj in "ios".
 
 ## Training
 The training process mainly consults [qqwweee/keras-yolo3](https://github.com/qqwweee/keras-yolo3). We add yolov3 with [Densnet](https://arxiv.org/pdf/1608.06993.pdf).
@@ -29,6 +29,7 @@ For yolo model with darknet:
 For yolo model with densenet：
 * ```python densenet_train.py```, with model_data/dense121_weights.h5 as pre-trained model
 
+
 ## Converting
 ### 1.Building environment
 ```
@@ -44,4 +45,14 @@ pip install coremltools==0.8.0
 ### 2.Convert .h5 model to .mlmodel
 ```python coreml.py```
 
+
 ## Building project in Xcode
+
+* open tiny_model.xcodeproj with Xcode 9+
+* change the .mlmodel file and Target Menmbership
+For yolo model with darknet or densenet
+* modify the code from line 43 to line 49 in YOLO.swift
+* change the labels and the anchors in Helpers.swift
+* run the project
+For tiny model
+* just change the labels and run the project
