@@ -50,9 +50,11 @@ pip install coremltools==0.8.0
 
 * open tiny_model.xcodeproj with Xcode 9+
 * change the .mlmodel file and Target Menmbership
+
 For yolo model with darknet or densenet
 * modify the code from line 43 to line 49 in YOLO.swift
 * change the labels and the anchors in Helpers.swift
 * run the project
+
 For tiny model
 * just change the labels and run the project
