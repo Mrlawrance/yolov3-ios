@@ -17,4 +17,4 @@ The training process mainly consults [qqwweee/keras-yolo3](https://github.com/qq
 * tensorflow 1.6.0
 
 #### 1.Generate datasets
-Generate datasets with VOC format. And try <p><a href="/home" title=" ">python voc_annotation.py</a></p>
+Generate datasets with VOC format. And try ```Bash python voc_annotations```
