@@ -7,19 +7,19 @@ Using yolo v3 object detection on ios platform.
 ## QuickStart:
 Build tiny_model.xcodeproj in "ios".
 
-## Do it yourself
-### Training
+## Training
 The training process mainly consults [qqwweee/keras-yolo3](https://github.com/qqwweee/keras-yolo3). We add yolov3 with [Densnet](https://arxiv.org/pdf/1608.06993.pdf).
 
-#### 0.Requirement
+### 1.Requirement
 * python 3.6.4
 * keras 2.1.5
 * tensorflow 1.6.0
 
-#### 1.Generate datasets
+### 2.Generate datasets
 Generate datasets with VOC format. And try ```python voc_annotations```.
 
-#### 2.Start training
+### 3.Start training
+```cd yolov3_with_Densenet```
 For yolo model with darknet:
 * ```wget https://pjreddie.com/media/files/darknet53.conv.74```
 * rename it as darknet53.weights
@@ -28,3 +28,18 @@ For yolo model with darknet:
 
 For yolo model with densenet：
 * ```python densenet_train.py```, with model_data/dense121_weights.h5 as pre-trained model
+
+## Converting
+### 1.Building environment
+```
+virtualenv -p /usr/bin/python2.7 keras_coreml_virt
+source keras_coreml_virt/bin/activate
+pip install protobuf
+pip install tensorflow==1.6.0
+pip install keras==2.1.5
+pip install h5py
+pip install coremltools==0.8.0
+```
+
+### 2.Convert .h5 model to .mlmodel
+```python coreml.py```
