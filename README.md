@@ -20,6 +20,7 @@ Generate datasets with VOC format. And try ```python voc_annotations```.
 
 ### 3.Start training
 ```cd yolov3_with_Densenet```
+
 For yolo model with darknet:
 * ```wget https://pjreddie.com/media/files/darknet53.conv.74```
 * rename it as darknet53.weights
