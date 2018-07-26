@@ -9,3 +9,4 @@ Build tiny_model.xcodeproj in "ios".
 
 ## Do it yourself
 ### Training
+The training process mainly consults [qqwweee/keras-yolo3](https://github.com/qqwweee/keras-yolo3), with yolov3-Densenet inside.
